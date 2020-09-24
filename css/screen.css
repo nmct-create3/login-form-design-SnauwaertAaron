@@ -1,7 +1,17 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
+@font-face {
+    font-family: "Inter Regular";
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2")
+}
 
+@font-face {
+    font-family: "Inter SemiBold";
+    font-weight: 600;
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2")
+}
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -25,12 +35,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: "Inter Regular", Helvetica, arial, sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -158,18 +168,19 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF
+    ;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #ff8f33;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #4733ff;
 }
 
 /*------------------------------------*\
@@ -238,6 +249,7 @@ a:focus {
 
 .o-section {
     position: relative;
+    background-color: #3385FF;
 }
 
 .o-section + .o-section {
@@ -422,6 +434,32 @@ a:focus {
     -webkit-appearance: none;
 }
 
+.o-button-signin {
+    background-color: #3385FF;
+    font-size: 16;
+    color: white;
+    font-family: "Inter SemiBold";
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #2E77E6;
+    border-radius: 3px;
+
+}
+
+.o-button-signin:hover {
+    background-color: #4F95FF;
+}
+
+.o-button-signin:active {
+    background-color: #2E77E6;
+}
+
+.o-button-signin:focus {
+    border: 1px solid rgba(51,133, 255, .49);   
+}
+
+
+
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
@@ -432,17 +470,64 @@ a:focus {
     Website main logo
 */
 
+.c-logo{
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.c-logo__symbol{
+    height: 100%;
+    display: block;
+}
+
+.c-logo__path--1{
+    fill: #20223A;
+}
+.c-logo__path--2{
+    fill: #3385FF;
+}
+.c-logo__path--3{
+    fill: #1B4186;
+}
+
 /*
     Component: Card
     ---
     Card with box shadow
 */
 
+.c-card { /* om een witte achtergrond, een border radius en de juiste border en box-shadow te geven. */
+
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 2px 4px rgba(0,0,0,0.07);;
+}
+
+.c-card__body { /* om de juiste padding te geven. */
+
+}
+
+.c-card__title { /* om de titel te centreren, en de juiste font-size, font-weight, line-height en witruimte onderaan te geven. */
+
+}
+
+.c-card__footer  { /* om de juiste padding en een border-top toe te voegen. Hier kan je ook de tekst centreren. */
+
+}
+
 /*
     Component: Forms
     ---
     Everything form related here
 */
+
+.form-field--option{
+ display: flex;
+ align-items: center;
+}
+
 
 /*
     Component: Input
@@ -451,10 +536,25 @@ a:focus {
 */
 
 .c-input {
-
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 3px;
+    font-family: inherit;
+    color: #20223A;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px;
 }
 
 .c-input:focus {
+    outline: none;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385ff4d; 
 }
 
 /*
@@ -464,7 +564,7 @@ a:focus {
 */
 
 .c-label {
-
+    display: block;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -498,6 +598,7 @@ a:focus {
 .c-button--block {
 
 }
+
 
 /*------------------------------------*\
 #UTILITIES
