@@ -168,9 +168,10 @@ hr {
 }
 
 a {
-    color: #3385FF
-    ;
+    color: #3385FF;
     transition: all .1s ease-in-out;
+    font-size: 14px;
+    text-align: center;
 }
 
 a:visited,
@@ -200,6 +201,9 @@ a:focus {
 
 .o-row--login {
     /* stuff here to align the card */
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* size modifiers */
@@ -502,19 +506,28 @@ a:focus {
 
     background: #FFFFFF;
     border-radius: 5px;
-    box-shadow: 2px 4px rgba(0,0,0,0.07);;
+    box-shadow: 2px 4px rgba(0,0,0,0.07);
 }
 
 .c-card__body { /* om de juiste padding te geven. */
+    padding: 0px 48px 0px 48px;
 
 }
 
 .c-card__title { /* om de titel te centreren, en de juiste font-size, font-weight, line-height en witruimte onderaan te geven. */
+    text-align: center;
+    font-family: "Inter SemiBold";
+    font-size: 18px;
+    padding-top: 48px;
 
 }
 
 .c-card__footer  { /* om de juiste padding en een border-top toe te voegen. Hier kan je ook de tekst centreren. */
-
+    text-align: center;
+    color: #757787;
+    font-size: 14px;
+    border-top: 1px solid #E2E3E7;
+    padding: 24px;
 }
 
 /*
@@ -522,6 +535,8 @@ a:focus {
     ---
     Everything form related here
 */
+.form-field{
+}
 
 .form-field--option{
  display: flex;
@@ -565,6 +580,15 @@ a:focus {
 
 .c-label {
     display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+}
+
+.c-label--option{
+    margin-bottom: 0px;
+    margin-left: 8px;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
